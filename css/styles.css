@@ -19,6 +19,36 @@ body {
   color: var(--primary-text-color);
 }
 
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+
+  /* outline: 2px solid tomato; */
+}
+.list {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 ul {
   list-style: none;
 }
@@ -32,8 +62,51 @@ a {
   cursor: pointer;
 }
 
+img {
+  display: block;
+}
 /*-----header---------*/
+.header {
+  border-bottom: 1px solid #ececec;
+}
+.container-header {
+  display: flex;
+  align-items: center;
+}
+
+.heder-navi-list {
+  display: flex;
+  align-items: center;
+  margin-left: 93px;
+}
+
+.heder-navi-list .list:not(:last-child) {
+  margin-right: 50px;
+}
+
+.heder-navi-list .list-description {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.list-contacts .header-contact + .header-contact {
+  margin-left: 50px;
+}
+
+.list-contacts {
+  display: flex;
+  margin-left: auto;
+}
+
+.list-contacts .list-con + .list-con {
+  margin-left: 50px;
+}
+
 .header-navigation {
+  display: flex;
+  align-items: center;
+
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -50,6 +123,7 @@ a {
 }
 
 .header-contact {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
@@ -92,7 +166,18 @@ a {
   background-color: #2f303a;
 }
 
+.footer .logofooter {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.adress-item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
 .footer-site-logo {
+  font-family: 'Raleway';
+  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 31px;
@@ -126,16 +211,24 @@ a {
 
 .section-head {
   background-color: #2f303a;
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 
 .head-text {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--white-text-color);
+  text-align: center;
+
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 .button-order {
@@ -147,7 +240,12 @@ a {
   letter-spacing: 0.06em;
   background-color: var(--accent-color);
   color: var(--white-text-color);
-  border: 0px;
+  border: 1px solid transparent;
+  display: inline-block;
+
+  border-radius: 6px;
+  padding: 10px 32px;
+  margin: auto;
   display: flex;
 }
 
@@ -159,12 +257,24 @@ a {
 
 /*----------особливості-------*/
 
+.list-specials {
+  display: flex;
+  gap: 30px;
+}
+
+.list-specials-item {
+  width: 270px;
+}
+
 .specials-head {
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-bottom: 10px;
 }
 
 .specials-paragraph {
@@ -175,8 +285,13 @@ a {
 }
 
 /* ----------чим ми займаємось---------- */
+.work {
+  padding-top: 0;
+}
 
 .work-head {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -184,12 +299,32 @@ a {
   color: var(--primary-text-color);
 }
 
+.work-list {
+  display: flex;
+  gap: 30px;
+}
+
 /* ------наша команда------- */
 .team {
   background-color: var(--team-background-color);
 }
 
+.team-item {
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+}
+
+.teamate-cntnr {
+  background-color: var(--white-background-color);
+  padding-top: 30px;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
 .team-head {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 42px;
@@ -198,7 +333,14 @@ a {
   color: var(--primary-text-color);
 }
 
+.team-list {
+  display: flex;
+  gap: 30px;
+}
+
 .teamate {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 19px;
@@ -216,8 +358,23 @@ a {
 }
 
 /*-------Портфоліо------*/
+.buttons-folio {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.buttons-folio-list {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
 
 .inlist-button-pholio {
+  margin: auto;
+  padding: 6px 22px;
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+
   font-weight: 500;
   font-size: 16px;
   line-height: 26px;
@@ -225,13 +382,37 @@ a {
   letter-spacing: 0.03em;
   background-color: var(--team-background-color);
   color: var(--primary-text-color);
-  border: 0px;
+  border: 1px solid transparent;
+
+  border-radius: 4px;
 }
 
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.all {
+  min-width: 73px;
+  padding: 6px 25px;
+}
 .inlist-button-pholio:hover,
 .inlist-button-pholio:focus {
   background-color: var(--accent-color);
   color: var(--white-text-color);
+}
+
+/* a.links {
+  text-decoration: none;
+  color: #000000;
+} */
+
+.portfolio-pictures {
+  padding: 20px 24px;
+  background: #ffffff;
+  border: 1px solid #eeeeee;
+  border-top: none;
 }
 
 .project-head {
@@ -239,6 +420,9 @@ a {
   font-size: 18px;
   line-height: 36px;
   letter-spacing: 0.06em;
+  color: var(--primary-text-color);
+
+  margin-bottom: 4px;
 }
 
 .project-info {
